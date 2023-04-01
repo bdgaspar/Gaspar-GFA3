@@ -33,7 +33,7 @@ function game(){
 	}
 
 	if (n1!=0){
-		var char = alphabet[n1];
+		var char = alphabet[n1-1];
 		document.getElementById("letter").innerHTML = char;
 	}
 
