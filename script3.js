@@ -10,28 +10,26 @@ function game(){
 	document.getElementById("players").innerHTML = n1+n2+n3;
 
 
-	if(Math.max(n1,n2,n3)==n1&&n1!=n2&&n1!=n3){
+	if(n1>n2&&n1>n3){
 		document.getElementById("biggest").innerHTML="escaped ("+n1+")";
 	}
-	else if(Math.max(n1,n2,n3)==n2&&n2!=n1&&n2!=n3){
+	else if(n2>1&&n2>n3){
 		document.getElementById("biggest").innerHTML="eliminated ("+n2+")";
 	}
-	else if(Math.max(n1,n2,n3)==n3&&n3!=n1&&n3!=n2){
+	else if(n3>n1&&n3>n2){
 		document.getElementById("biggest").innerHTML="in-game ("+n3+")";
 	}
-	else{
-		if(n1==n2&&n1>n3){
+	else if(n1==n2&&n2>n3){
 			document.getElementById("biggest").innerHTML="escaped, eliminated  ("+n1+")";
-		}
-		else if(n1==n3&&n1>n2){
-			document.getElementById("biggest").innerHTML="escaped, in-game ("+n3+")";
-		}
-		else if(n2==n3&&n2>n1){
-			document.getElementById("biggest").innerHTML="eliminated, in-game ("+n2+")";
-		}
-		else if(n1==n2==n3){
-			document.getElementById("biggest").innerHTML="escaped, eliminated, in-game ("+n3+")";
-		}
+	}
+	else if(n1==n3&&n3>n2){
+		document.getElementById("biggest").innerHTML="escaped, in-game ("+n1+")";
+	}
+	else if(n2==n3&&n3>n1){
+		document.getElementById("biggest").innerHTML="eliminated, in-game ("+n2+")";
+	}
+	else if(n1==n2==n3){
+		document.getElementById("biggest").innerHTML="escaped, eliminated, in-game ("+n1+")";
 	}
 
 	if (n1!=0){
