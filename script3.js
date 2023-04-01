@@ -9,7 +9,6 @@ function game(){
 	document.getElementById("n3").innerHTML = n3;
 	document.getElementById("players").innerHTML = n1+n2+n3;
 
-
 	if(n1>n2&&n1>n3){
 		document.getElementById("biggest").innerHTML="escaped ("+n1+")";
 	}
