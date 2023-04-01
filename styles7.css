@@ -1,0 +1,45 @@
+@keyframes fadeInAnimation {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+body{
+	background-image: url(EscapeRoom.jpg);
+	background-size: cover;
+}
+main{
+	background-color: #3F1F04A3;
+	color: white;
+	font-family: Papyrus, fantasy;
+	width: 60%;
+	margin: 25px auto;
+	padding: 15px;
+	border-radius: 10px;
+	animation: fadeInAnimation ease 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+h1{
+	text-align: center;
+	font-size: 40px;
+}
+.text{
+	text-align: center;
+}
+#data{
+	display: flex;
+	margin: 30px;
+}
+.data{
+	text-align: center;
+	margin: auto;
+	border: 1px dashed;
+	border-radius: 10px;
+	width: 170px;
+	height: 150px;
+}
+.data p{
+	font-size: 20px;
+}
+.data h4, .data p{
+	margin: 20px;
+}
